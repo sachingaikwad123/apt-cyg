@@ -1,7 +1,9 @@
 apt-cyg
 =======
 
-Fork of [apt-cyg](http://code.google.com/p/apt-cyg/) from http://code.google.com/p/apt-cyg/
+ Credits:
+ - [John Peterson](https://github.com/john-peterson)Fork of [apt-cyg](https://github.com/john-peterson/apt-cyg) from https://github.com/john-peterson/apt-cyg
+ - Google Code: Fork of [apt-cyg](http://code.google.com/p/apt-cyg/) from http://code.google.com/p/apt-cyg/
 
 Intro
 -----
@@ -20,7 +22,7 @@ Quick start
 -----------
 First install curl and wget through the standard cygwin setup program. Then run the following commands:
 
-    # curl -o /usr/bin/apt-cyg https://raw.github.com/cfg/apt-cyg/master/apt-cyg
+    # curl -o /usr/bin/apt-cyg https://raw.github.com/sachingaikwad123/apt-cyg/master/apt-cyg
     # chmod +x /usr/bin/apt-cyg
 
 use apt-cyg, for example:
