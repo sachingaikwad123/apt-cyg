@@ -132,6 +132,32 @@ function checkpackages()
   fi
 }
 
+#
+# Expects that working directory is /setup/<mirror-dir>/release/$pkg/
+# On return, working directory will be /setup/<mirror-dir>
+#
+function unpack_package()
+{
+    echo "Unpacking $file ..."
+    suffix=`file $file | awk '{print $2 }'`
+    echo "File type is $suffix ..."
+    case "$suffix" in
+        bzip2)
+            tar_options="xvjf"
+        ;;
+        XZ)
+            tar_options="xvJf"
+        ;;
+        *)
+            echo "Unknown compression type, exiting "
+            exit 1
+        ;;
+    esac
+    cat $file | tar > "/etc/setup/$pkg.lst" $tar_options - -C /
+    gzip -f "/etc/setup/$pkg.lst"
+    cd ../..
+}
+
 
 # process options
 
@@ -441,10 +467,7 @@ case "$command" in
     fi
 
     echo "Unpacking..."
-    cat $file | bunzip2 | tar > "/etc/setup/$pkg.lst" xvf - -C /
-    gzip -f "/etc/setup/$pkg.lst"
-    cd ../..
-
+    unpack_package
 
     # update the package database
 
