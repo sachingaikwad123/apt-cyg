@@ -2,7 +2,7 @@ apt-cyg
 =======
 
  Credits:
- - [John Peterson](https://github.com/john-peterson)Fork of [apt-cyg](https://github.com/john-peterson/apt-cyg) from https://github.com/john-peterson/apt-cyg
+ - [John Peterson](https://github.com/john-peterson): Fork of [apt-cyg](https://github.com/john-peterson/apt-cyg) from https://github.com/john-peterson/apt-cyg
  - Google Code: Fork of [apt-cyg](http://code.google.com/p/apt-cyg/) from http://code.google.com/p/apt-cyg/
 
 Intro
